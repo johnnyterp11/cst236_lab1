@@ -1,6 +1,6 @@
 from source.question_answer import QA
 from source.shape_checker import get_triangle_type, get_object_shape_type_2
-from job_story_end import check_current_time
+from source.job_story_end import check_current_time
 from git_utils import check_valid_path, get_git_file_info, get_file_info, get_repo_branch, get_repo_url, is_file_in_repo
 
 import difflib
@@ -42,6 +42,10 @@ class Interface(object):
 
     def ask(self, question=""):
 
+        """
+        func that takes questions
+        :param question:
+        """
         if not isinstance(question, str):
             self.last_question = None
             raise Exception('Not A String!')
@@ -74,6 +78,11 @@ class Interface(object):
                 return UNKNOWN_QUESTION
 
     def teach(self, answer=""):
+        """
+
+        :param answer:
+        :return:
+        """
         if self.last_question is None:
             return NO_QUESTION
         elif self.last_question in self.question_answers.keys():
@@ -82,6 +91,11 @@ class Interface(object):
             self.__add_answer(answer)
 
     def correct(self, answer=""):
+        """
+
+        :param answer:
+        :return:
+        """
         if self.last_question is None:
             return NO_QUESTION
         else:
@@ -91,6 +105,10 @@ class Interface(object):
         self.question_answers[self.last_question] = QA(self.last_question, answer)
 
     def delete(self):
+        """
+        func that checks for delete
+        :rtype: object
+        """
         self.question_answers = {}
         return "deleted"
 

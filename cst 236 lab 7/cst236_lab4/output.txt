@@ -18,8 +18,7 @@
  #0009 test_question_string_type 
  #0010 test_break_question_into_words 
  #00100 test_file_path 
- #0011 test_match_question_answer 
- #00110 #0012 test_exclude_numbers 
+ #0011 #00110 #0012 test_exclude_numbers 
  #00120 test_status_of_file 
  #0013 test_valid_match 
  #00130 test_get_repo_branch 
@@ -29,7 +28,6 @@
  #0015 test_provide_means_to_answer 
  #0016 #0017 test_correct_keyword_answer 
  #0018 test_teach_different_answer 
- #0019 test_system_update 
- #0020 #0021 test_correct_keyword_answer 
+ #0019 #0020 #0021 test_correct_keyword_answer 
  #0050 #0051 test_answer 
  test_question 
